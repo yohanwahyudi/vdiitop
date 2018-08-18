@@ -1,8 +1,21 @@
 package org.vdi.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="staging_servicedesk")
 public class ServiceDeskVDI {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator="seq1")
+	@SequenceGenerator(name="seq1", sequenceName="seq1", allocationSize=100)
+	@Column(name="id", updatable=false, nullable=false)
 	private Long id;
 	private String scalar_date;
 	private String scalar_time;
@@ -30,14 +43,20 @@ public class ServiceDeskVDI {
 	private String incident_agent;
 	private String incident_team_Name;
 	private String incident_team;
+	
+	@Column(name="description", length=4000)
 	private String incident_description;
+	
 	private String incident_status;
 	private String incident_priority;
 	private String incident_origin;
 	private String incident_last_pending_date;
 	private String incident_last_pending_time;
 	private String incident_cumulated_pending;
+	
+	@Column(name="pending_reason", length=4000)
 	private String incident_pending_reason;
+	
 	private String incident_parent_incident_ref;
 	private String incident_ref2;
 	private String incident_parent_change_ref;
@@ -50,15 +69,22 @@ public class ServiceDeskVDI {
 	private String incident_sla_ttr_over;
 	private String incident_ttr_Deadline;
 	private String incident_resolution_delay;
+	
+	@Column(name="solution", length=4000)
 	private String incident_solution;
+	
 	private String incident_tto;
 	private String incident_ttr;
 	private String person_full_name;
 	private String person_organization_name;
 	private String person_organization;
 	private String incident_user_satisfaction;
+	
+	@Column(name="user_comment", length=4000)
 	private String incident_user_comment;
+	
 	private String incident_service_name;
+	private String organization_parent_name;
 	
 	public ServiceDeskVDI() {
 		
@@ -393,6 +419,14 @@ public class ServiceDeskVDI {
 	}
 	public void setIncident_service_name(String incident_service_name) {
 		this.incident_service_name = incident_service_name;
+	}
+
+	public String getOrganization_parent_name() {
+		return organization_parent_name;
+	}
+
+	public void setOrganization_parent_name(String organization_parent_name) {
+		this.organization_parent_name = organization_parent_name;
 	}
 	
 	

@@ -1,4 +1,4 @@
-package org.vdi.config;
+package org.vdi.core.config;
 
 import java.util.Properties;
 
@@ -16,7 +16,7 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.vdi.constant.ConstantProperties;
+import org.vdi.core.constant.ConstantProperties;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -24,7 +24,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 //@ComponentScan(basePackages = "com.vdi")
 @ComponentScan({"org.vdi.repository", "org.vdi.model"})
-@EnableJpaRepositories(basePackages = { "com.vdi.batch.mds.repository"})
+@EnableJpaRepositories(basePackages = { "org.vdi.repository"})
 @EnableTransactionManagement
 @PropertySources({
 		@PropertySource("classpath:config.properties")

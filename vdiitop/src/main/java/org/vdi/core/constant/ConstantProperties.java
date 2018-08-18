@@ -1,4 +1,4 @@
-package org.vdi.constant;
+package org.vdi.core.constant;
 
 public final class ConstantProperties {
 
@@ -26,6 +26,16 @@ public final class ConstantProperties {
 	public static final String ITOP_WEB_HEADER_ACCEPT_PROXY_CONNECTION_VAL = "keep-alive";
 	public static final String ITOP_WEB_HEADER_ACCEPT_UPGRADE_INSECURE_REQUESTS_VAL = "1";
 
+	public static final String CONSTANT_PERIOD_SHIFT_1 = "shift1";
+	public static final String CONSTANT_PERIOD_SHIFT_2 = "shift2";
+	public static final String CONSTANT_PERIOD_SHIFT_3 = "shift3";
+	public static final String CONSTANT_PERIOD_MONTHLY = "monthly";
+	public static final String CONSTANT_PERIOD_WEEKLY = "weekly";
+	
+	public static final String CONSTANT_CATEGORY_SD = "sd";
+	public static final String CONSTANT_CATEGORY_SA = "sa";
+	public static final String CONSTANT_CATEGORY_UR = "ur";
+	
 	public static final String PROPS_ITOP_WEB_HOST = "itop.web.host";
 	public static final String PROPS_ITOP_WEB_HOST_URL = "itop.web.host.url";
 	public static final String PROPS_ITOP_WEB_AUTHORIZATION = "itop.web.authorization";

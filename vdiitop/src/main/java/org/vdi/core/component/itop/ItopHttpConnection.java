@@ -1,4 +1,4 @@
-package org.vdi.component.itop;
+package org.vdi.core.component.itop;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,9 +14,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.vdi.component.http.HttpClientRequest;
-import org.vdi.config.ApplicationProperties;
-import org.vdi.constant.ConstantProperties;
+import org.vdi.core.component.http.HttpClientRequest;
+import org.vdi.core.config.ApplicationProperties;
+import org.vdi.core.constant.ConstantProperties;
 
 @Component("itopHttpConnection")
 public class ItopHttpConnection {

@@ -1,4 +1,4 @@
-package org.vdi.config;
+package org.vdi.core.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
-import org.vdi.constant.ConstantProperties;
+import org.vdi.core.constant.ConstantProperties;
 
 @Configuration
-@ComponentScan({"org.vdi.component.http", "org.vdi.config", "org.vdi.component.itop"})
+@ComponentScan({"org.vdi.component.http", "org.vdi.config", "org.vdi.component.itop","org.vdi.services"})
 @PropertySources({
 	@PropertySource("classpath:application.properties")
 })

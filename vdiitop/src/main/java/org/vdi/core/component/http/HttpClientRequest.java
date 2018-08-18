@@ -1,4 +1,4 @@
-package org.vdi.component.http;
+package org.vdi.core.component.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.vdi.config.ApplicationProperties;
+import org.vdi.core.config.ApplicationProperties;
 
 @Component("httpClientRequest")
 public class HttpClientRequest {

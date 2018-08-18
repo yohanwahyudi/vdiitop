@@ -6,8 +6,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.vdi.component.itop.ItopHttpConnection;
-import org.vdi.config.ApplicationProperties;
+import org.vdi.core.component.itop.ItopHttpConnection;
+import org.vdi.core.config.ApplicationProperties;
 
 public class TestHttpClient {
 	
