@@ -8,13 +8,14 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.vdi.core.component.itop.ItopHttpConnection;
 import org.vdi.core.config.ApplicationProperties;
+import org.vdi.core.config.ConfigProperties;
 
 public class TestHttpClient {
 	
 	private final static Logger logger = LogManager.getLogger(TestHttpClient.class);
 	
 	public static void main (String args[]) throws ClientProtocolException, IOException {
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationProperties.class);
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigProperties.class);
 //		AnnotationConfigApplicationContext ctx1 = new AnnotationConfigApplicationContext(ConfigProperties.class);
 //		HttpClientRequest props = ctx.getBean("httpClientRequest",HttpClientRequest.class);
 //		
@@ -28,7 +29,7 @@ public class TestHttpClient {
 		String result = 
 				itopHttp.getQueryPhrasebookPageContent(
 						url);
-		logger.debug(result);
+//		logger.debug(result);
 		ctx.close();
 	}
 

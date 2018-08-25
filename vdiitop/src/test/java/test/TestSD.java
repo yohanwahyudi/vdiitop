@@ -19,12 +19,12 @@ public class TestSD {
 	public static void main(String args[]) throws IllegalArgumentException, IllegalAccessException {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigProperties.class);
 		
-//		itopDataLoaderService itopService = ctx.getBean("serviceDeskDataLoaderService", itopDataLoaderService.class);
-//		List<ServiceDeskVDI> listSD = (List<ServiceDeskVDI>) itopService.getAllDataByURL();
+		itopDataLoaderService itopService = ctx.getBean("serviceDeskDataLoaderService", itopDataLoaderService.class);
+		List<ServiceDeskVDI> listSD = (List<ServiceDeskVDI>) itopService.getAllDataByURL();
 //		
 //		logger.debug(listSD.size());
 //		
-//		ServiceDeskVDI sd = listSD.get(0);
+//		ServiceDeskVDI sd = listSD.get(0); 
 //		for(Field field : sd.getClass().getDeclaredFields()) {
 //			field.setAccessible(true);
 //			String name = field.getName();
@@ -34,7 +34,7 @@ public class TestSD {
 //		}
 		
 		ServiceDeskDAO sdDAO = ctx.getBean("serviceDeskDAO", ServiceDeskDAO.class);
-//		sdDAO.addAll(listSD);
+		sdDAO.addAll(listSD);
 		
 		List<Object[]> objList = sdDAO.getSummaryByTime("00:01:00","08:00:00");
 		

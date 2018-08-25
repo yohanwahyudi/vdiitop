@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -44,6 +45,7 @@ public class ServiceDeskVDI {
 	private String incident_team_Name;
 	private String incident_team;
 	
+	@Lob
 	@Column(name="description", length=4000)
 	private String incident_description;
 	
@@ -54,6 +56,7 @@ public class ServiceDeskVDI {
 	private String incident_last_pending_time;
 	private String incident_cumulated_pending;
 	
+	@Lob
 	@Column(name="pending_reason", length=4000)
 	private String incident_pending_reason;
 	
@@ -70,6 +73,7 @@ public class ServiceDeskVDI {
 	private String incident_ttr_Deadline;
 	private String incident_resolution_delay;
 	
+	@Lob
 	@Column(name="solution", length=4000)
 	private String incident_solution;
 	
@@ -80,6 +84,7 @@ public class ServiceDeskVDI {
 	private String person_organization;
 	private String incident_user_satisfaction;
 	
+	@Lob
 	@Column(name="user_comment", length=4000)
 	private String incident_user_comment;
 	
