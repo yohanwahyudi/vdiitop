@@ -19,8 +19,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -38,8 +38,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -58,8 +58,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -79,8 +79,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -104,8 +104,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -125,8 +125,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -147,8 +147,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -170,8 +170,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -197,8 +197,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -207,7 +207,7 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	AND " + 
 			"		time(sd.incident_start_date) >= :timeFrom " +
 			"	AND " + 
-			"		time(sd.incident_start_date) <= :timeto " +
+			"		time(sd.incident_start_date) <= :timeTo " +
 			"	group by incident_agent" + 
 			")A " + 
 			"LEFT JOIN " + 
@@ -218,8 +218,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -228,7 +228,7 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	AND " + 
 			"		time(sd.incident_start_date) >= :timeFrom " +
 			"	AND " + 
-			"		time(sd.incident_start_date) <= :timeto " +
+			"		time(sd.incident_start_date) <= :timeTo " +
 			"	group by incident_agent " + 
 			"	" + 
 			")B on A.agent=B.agent " + 
@@ -240,8 +240,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -252,7 +252,7 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	AND " + 
 			"		time(sd.incident_start_date) >= :timeFrom " +
 			"	AND " + 
-			"		time(sd.incident_start_date) <= :timeto " +
+			"		time(sd.incident_start_date) <= :timeTo " +
 			"	group by incident_agent " + 
 			")C ON A.agent=C.agent " + 
 			"LEFT JOIN " + 
@@ -263,8 +263,8 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	FROM " + 
 			"		staging_servicedesk sd " + 
 			"	WHERE " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND " + 
 			"		sd.scalar_previous_value in ('escalated_tto','new') " + 
 			"	AND " + 
 			"		sd.scalar_new_value = 'assigned' " + 
@@ -275,7 +275,7 @@ public interface SDAgentRepository extends CrudRepository<ServiceDeskVDI, Long>{
 			"	AND " + 
 			"		time(sd.incident_start_date) >= :timeFrom " +
 			"	AND " + 
-			"		time(sd.incident_start_date) <= :timeto " +
+			"		time(sd.incident_start_date) <= :timeTo " +
 			"	group by incident_agent " + 
 			") D on A.agent=D.agent;", nativeQuery=true)
 	public List<Object[]> getAgentPerformanceByTime(@Param("timeFrom") String timeFrom, @Param("timeTo") String timeto);

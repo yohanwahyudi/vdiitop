@@ -18,13 +18,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)=month(curdate())  " + 
 			"	AND  " + 
-			"		week(incident_start_date)=:week " + 
+			"		week(incident_start_date,3)=:week " + 
 			" " + 
 			") A " + 
 			"JOIN " + 
@@ -34,13 +34,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)=month(curdate())  " + 
 			"	AND  " + 
-			"		week(incident_start_date)=:week " + 
+			"		week(incident_start_date,3)=:week " + 
 			"	AND " + 
 			"		incident_sla_tto_passed='no' " + 
 			") B " + 
@@ -51,13 +51,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)=month(curdate())  " + 
 			"	AND  " + 
-			"		week(incident_start_date)=:week " + 
+			"		week(incident_start_date,3)=:week " + 
 			"	AND " + 
 			"		incident_sla_tto_passed='yes' " + 
 			") C " + 
@@ -74,8 +74,8 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)= :month  " + 
@@ -88,8 +88,8 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)= :month  " + 
@@ -103,8 +103,8 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"    FROM " + 
 			"		staging_servicedesk  " + 
 			"	WHERE  " + 
-			"		incident_organization_name='Visionet International (OVO) PT' " + 
-			"	AND  " + 
+//			"		incident_organization_name='Visionet International (OVO) PT' " + 
+//			"	AND  " + 
 			"		year(incident_start_date)=year(curdate())  " + 
 			"	AND " + 
 			"		month(incident_start_date)= :month  " + 
@@ -124,13 +124,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"			    FROM  " + 
 			"					staging_servicedesk   " + 
 			"				WHERE   " + 
-			"					incident_organization_name='Visionet International (OVO) PT'  " + 
-			"				AND   " + 
+//			"					incident_organization_name='Visionet International (OVO) PT'  " + 
+//			"				AND   " + 
 			"					date(incident_start_date)=curdate()   " + 
 			"				AND " + 
-			"					TIME(incident_start_date) >= :timeFrom  " + 
+			"					TIME(incident_start_time) >= :timeFrom  " + 
 			"				AND " + 
-			"					TIME(incident_start_date) <= :timeTo  " + 
+			"					TIME(incident_start_time) <= :timeTo  " + 
 			"			  " + 
 			"			) A  " + 
 			"			JOIN  " + 
@@ -140,13 +140,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"			    FROM  " + 
 			"					staging_servicedesk   " + 
 			"				WHERE   " + 
-			"					incident_organization_name='Visionet International (OVO) PT'  " + 
-			"				AND   " + 
+//			"					incident_organization_name='Visionet International (OVO) PT'  " + 
+//			"				AND   " + 
 			"					date(incident_start_date)=curdate()   " + 
 			"				AND " + 
-			"					TIME(incident_start_date) >= :timeFrom  " + 
+			"					TIME(incident_start_time) >= :timeFrom  " + 
 			"				AND " + 
-			"					TIME(incident_start_date) <= :timeTo   " + 
+			"					TIME(incident_start_time) <= :timeTo   " + 
 			"				AND  " + 
 			"					incident_sla_tto_passed='no'  " + 
 			"			) B  " + 
@@ -157,13 +157,13 @@ public interface SDSummaryRepository extends CrudRepository<ServiceDeskVDI, Long
 			"			    FROM  " + 
 			"					staging_servicedesk   " + 
 			"				WHERE   " + 
-			"					incident_organization_name='Visionet International (OVO) PT'  " + 
-			"				AND   " + 
+//			"					incident_organization_name='Visionet International (OVO) PT'  " + 
+//			"				AND   " + 
 			"					date(incident_start_date)=curdate()   " + 
 			"				AND " + 
-			"					TIME(incident_start_date) >= :timeFrom  " + 
+			"					TIME(incident_start_time) >= :timeFrom  " + 
 			"				AND " + 
-			"					TIME(incident_start_date) <= :timeTo    " + 
+			"					TIME(incident_start_time) <= :timeTo    " + 
 			"				AND  " + 
 			"					incident_sla_tto_passed='yes'  " + 
 			"			) C  " + 

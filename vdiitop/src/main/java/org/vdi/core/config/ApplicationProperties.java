@@ -9,7 +9,8 @@ import org.springframework.core.env.Environment;
 import org.vdi.core.constant.ConstantProperties;
 
 @Configuration
-@ComponentScan({"org.vdi.component.http", "org.vdi.config", "org.vdi.component.itop","org.vdi.services"})
+//@ComponentScan({"org.vdi.core.component.http", "org.vdi.core.config", "org.vdi.core.component.itop","org.vdi.services"})
+@ComponentScan({"org.vdi.helper"})
 @PropertySources({
 	@PropertySource("classpath:application.properties")
 })

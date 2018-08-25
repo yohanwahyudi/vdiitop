@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.vdi.core.config.ApplicationProperties;
+import org.vdi.core.config.ConfigProperties;
 import org.vdi.model.ServiceDeskVDI;
 import org.vdi.repository.dao.ServiceDeskDAO;
 import org.vdi.services.itopDataLoaderService;
@@ -16,7 +17,7 @@ public class TestSD {
 	private static final Logger logger = LogManager.getLogger(TestSD.class);
 	
 	public static void main(String args[]) throws IllegalArgumentException, IllegalAccessException {
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationProperties.class);
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigProperties.class);
 		
 //		itopDataLoaderService itopService = ctx.getBean("serviceDeskDataLoaderService", itopDataLoaderService.class);
 //		List<ServiceDeskVDI> listSD = (List<ServiceDeskVDI>) itopService.getAllDataByURL();

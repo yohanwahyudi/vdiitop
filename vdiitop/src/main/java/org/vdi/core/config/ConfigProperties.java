@@ -23,7 +23,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 //@ComponentScan(basePackages = "com.vdi")
-@ComponentScan({"org.vdi.repository", "org.vdi.model"})
+@ComponentScan({"org.vdi.repository", "org.vdi.model", "org.vdi.core.component.http", "org.vdi.core.config", "org.vdi.core.component.itop","org.vdi.services"})
 @EnableJpaRepositories(basePackages = { "org.vdi.repository"})
 @EnableTransactionManagement
 @PropertySources({

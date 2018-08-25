@@ -26,6 +26,7 @@ public final class ConstantProperties {
 	public static final String ITOP_WEB_HEADER_ACCEPT_PROXY_CONNECTION_VAL = "keep-alive";
 	public static final String ITOP_WEB_HEADER_ACCEPT_UPGRADE_INSECURE_REQUESTS_VAL = "1";
 
+	public static final String CONSTANT_PERIOD_SHIFT = "shift";
 	public static final String CONSTANT_PERIOD_SHIFT_1 = "shift1";
 	public static final String CONSTANT_PERIOD_SHIFT_2 = "shift2";
 	public static final String CONSTANT_PERIOD_SHIFT_3 = "shift3";
